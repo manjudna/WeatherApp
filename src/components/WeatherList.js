@@ -8,6 +8,19 @@ import {
 } from 'react-bootstrap';
 
 const WeatherList = props => {
+  
+   let sunrise = convertTime( props.data.sunrise);
+  let sunset = convertTime( props.data.sunset);
+  
+
+  function convertTime(unixTime){
+    let dt = new Date(unixTime * 1000)
+    let h = dt.getHours()
+    let m = "0" + dt.getMinutes()
+    let t = h + ":" + m.substr(-2)
+    return t
+}
+  
   return (
     <div>
       {/*
@@ -60,11 +73,11 @@ const WeatherList = props => {
 
 <div className={"col s12 m6"}>
 <span className={"text"}>Sunrise</span>
-<h4>{props.data.sunrise}</h4>
+<h4>{sunrise}</h4>
 </div>
 <div className={"col s12 m6"}>
 <span className={"text"}>Sunset</span>
-<h4>{props.data.sunset}</h4>
+<h4>{sunset}</h4>
 </div>
 </div>       
 }
