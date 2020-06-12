@@ -14,12 +14,8 @@ See it [here](https://jackdbd.github.io/react-redux-weather).
 # Installation
 
 ```
-git clone git@github.com:jackdbd/react-redux-weather.git
 cd react-redux-weather
-yarn install
-yarn start  # localhost:3000
+npm install
+npm start
 ```
 
-# Credits
-
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
